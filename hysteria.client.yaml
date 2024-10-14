@@ -1,0 +1,10 @@
+server: yourserver
+auth: changeme
+tls:
+  sni: bing.com
+  insecure: true
+
+socks5: 
+  listen: localhost:2080
+http: 
+  listen: localhost:2081

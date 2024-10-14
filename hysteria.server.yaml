@@ -1,0 +1,12 @@
+tls:
+  cert: server.crt 
+  key: server.key 
+auth:
+  type: password
+  password: changeme
+masquerade: 
+  type: proxy
+  proxy:
+    url: https://bing.com/ 
+    rewriteHost: true
+

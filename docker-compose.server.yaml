@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  hysteria:
+    image: xsephiroth/hysteria:2.5.2
+    container_name: hysteria2
+    restart: always
+    network_mode: "host"
+    volumes:
+      - ./hysteria.server.yaml:/hysteria.yaml
+      - ./server.crt:/server.crt
+      - ./server.key:/server.key
+    command: ["hysteria", "server", "-c", "/hysteria.yaml"]
